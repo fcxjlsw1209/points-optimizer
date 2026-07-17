@@ -1,0 +1,101 @@
+[
+  {
+    "id": "chase_sapphire_reserve",
+    "name": "Chase Sapphire Reserve",
+    "currency": "chase_ur",
+    "sub_points": 60000,
+    "sub_spend": 4000,
+    "sub_months": 3,
+    "annual_fee": 550
+  },
+  {
+    "id": "chase_sapphire_preferred",
+    "name": "Chase Sapphire Preferred",
+    "currency": "chase_ur",
+    "sub_points": 60000,
+    "sub_spend": 4000,
+    "sub_months": 3,
+    "annual_fee": 95
+  },
+  {
+    "id": "chase_ink_preferred",
+    "name": "Chase Ink Business Preferred",
+    "currency": "chase_ur",
+    "sub_points": 90000,
+    "sub_spend": 8000,
+    "sub_months": 3,
+    "annual_fee": 95
+  },
+  {
+    "id": "chase_ink_unlimited",
+    "name": "Chase Ink Business Unlimited",
+    "currency": "chase_ur",
+    "sub_points": 75000,
+    "sub_spend": 6000,
+    "sub_months": 3,
+    "annual_fee": 0
+  },
+  {
+    "id": "amex_platinum",
+    "name": "Amex Platinum",
+    "currency": "amex_mr",
+    "sub_points": 80000,
+    "sub_spend": 8000,
+    "sub_months": 6,
+    "annual_fee": 695
+  },
+  {
+    "id": "amex_gold",
+    "name": "Amex Gold",
+    "currency": "amex_mr",
+    "sub_points": 60000,
+    "sub_spend": 6000,
+    "sub_months": 6,
+    "annual_fee": 250
+  },
+  {
+    "id": "amex_green",
+    "name": "Amex Green",
+    "currency": "amex_mr",
+    "sub_points": 40000,
+    "sub_spend": 3000,
+    "sub_months": 6,
+    "annual_fee": 150
+  },
+  {
+    "id": "amex_business_platinum",
+    "name": "Amex Business Platinum",
+    "currency": "amex_mr",
+    "sub_points": 120000,
+    "sub_spend": 15000,
+    "sub_months": 3,
+    "annual_fee": 695
+  },
+  {
+    "id": "citi_premier",
+    "name": "Citi Premier",
+    "currency": "citi_ty",
+    "sub_points": 60000,
+    "sub_spend": 4000,
+    "sub_months": 3,
+    "annual_fee": 95
+  },
+  {
+    "id": "citi_prestige",
+    "name": "Citi Prestige",
+    "currency": "citi_ty",
+    "sub_points": 50000,
+    "sub_spend": 4000,
+    "sub_months": 3,
+    "annual_fee": 495
+  },
+  {
+    "id": "bilt_mastercard",
+    "name": "Bilt Mastercard",
+    "currency": "bilt",
+    "sub_points": 0,
+    "sub_spend": 0,
+    "sub_months": 0,
+    "annual_fee": 0
+  }
+]

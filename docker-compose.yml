@@ -1,0 +1,31 @@
+services:
+  points-optimizer-frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: points-optimizer-frontend
+    expose:
+      - "80"
+    depends_on:
+      - points-optimizer-backend
+    networks:
+      - points-optimizer-internal
+      - shared-web
+
+  points-optimizer-backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: points-optimizer-backend
+    volumes:
+      - points_optimizer_data:/root/.points-optimizer
+    networks:
+      - points-optimizer-internal
+
+volumes:
+  points_optimizer_data:
+
+networks:
+  points-optimizer-internal:
+  shared-web:
+    external: true

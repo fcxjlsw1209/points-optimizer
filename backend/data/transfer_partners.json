@@ -1,0 +1,42 @@
+{
+  "chase_ur": [
+    {"airline": "united",     "program": "MileagePlus",      "ratio": 1.0},
+    {"airline": "ana",        "program": "ANA Mileage Club",  "ratio": 1.0},
+    {"airline": "air_france", "program": "Flying Blue",       "ratio": 1.0},
+    {"airline": "ba",         "program": "Avios",             "ratio": 1.0},
+    {"airline": "aeroplan",   "program": "Aeroplan",          "ratio": 1.0},
+    {"airline": "singapore",  "program": "KrisFlyer",         "ratio": 1.0},
+    {"airline": "virgin",     "program": "Virgin Atlantic",   "ratio": 1.0}
+  ],
+  "amex_mr": [
+    {"airline": "ana",        "program": "ANA Mileage Club",  "ratio": 1.0},
+    {"airline": "cathay",     "program": "Asia Miles",        "ratio": 1.0},
+    {"airline": "air_france", "program": "Flying Blue",       "ratio": 1.0},
+    {"airline": "ba",         "program": "Avios",             "ratio": 1.0},
+    {"airline": "delta",      "program": "SkyMiles",          "ratio": 1.0},
+    {"airline": "singapore",  "program": "KrisFlyer",         "ratio": 1.0},
+    {"airline": "aeroplan",   "program": "Aeroplan",          "ratio": 1.0},
+    {"airline": "virgin",     "program": "Virgin Atlantic",   "ratio": 1.0},
+    {"airline": "jetblue",    "program": "TrueBlue",          "ratio": 0.8}
+  ],
+  "citi_ty": [
+    {"airline": "turkish",    "program": "Miles&Smiles",      "ratio": 1.0},
+    {"airline": "ana",        "program": "ANA Mileage Club",  "ratio": 1.0},
+    {"airline": "air_france", "program": "Flying Blue",       "ratio": 1.0},
+    {"airline": "cathay",     "program": "Asia Miles",        "ratio": 1.0},
+    {"airline": "singapore",  "program": "KrisFlyer",         "ratio": 1.0},
+    {"airline": "avianca",    "program": "LifeMiles",         "ratio": 1.0},
+    {"airline": "jetblue",    "program": "TrueBlue",          "ratio": 1.0}
+  ],
+  "bilt": [
+    {"airline": "united",     "program": "MileagePlus",      "ratio": 1.0},
+    {"airline": "american",   "program": "AAdvantage",       "ratio": 1.0},
+    {"airline": "air_france", "program": "Flying Blue",       "ratio": 1.0},
+    {"airline": "alaska",     "program": "Mileage Plan",     "ratio": 1.0},
+    {"airline": "aeroplan",   "program": "Aeroplan",         "ratio": 1.0},
+    {"airline": "ba",         "program": "Avios",            "ratio": 1.0},
+    {"airline": "cathay",     "program": "Asia Miles",       "ratio": 1.0},
+    {"airline": "virgin",     "program": "Virgin Atlantic",  "ratio": 1.0},
+    {"airline": "turkish",    "program": "Miles&Smiles",     "ratio": 1.0}
+  ]
+}

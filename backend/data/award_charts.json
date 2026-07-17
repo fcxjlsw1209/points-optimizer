@@ -1,0 +1,193 @@
+{
+  "airport_regions": {
+    "SFO": "north_america", "LAX": "north_america", "JFK": "north_america",
+    "ORD": "north_america", "SEA": "north_america", "BOS": "north_america",
+    "MIA": "north_america", "DFW": "north_america", "ATL": "north_america",
+    "YVR": "north_america", "YYZ": "north_america",
+    "NRT": "japan", "HND": "japan", "KIX": "japan",
+    "HKG": "hong_kong",
+    "PEK": "china", "PVG": "china", "CAN": "china", "CTU": "china",
+    "ICN": "korea",
+    "SIN": "southeast_asia", "BKK": "southeast_asia", "KUL": "southeast_asia",
+    "LHR": "uk", "LGW": "uk",
+    "CDG": "europe", "FRA": "europe", "AMS": "europe", "FCO": "europe",
+    "MAD": "europe", "BCN": "europe", "ZRH": "europe", "VIE": "europe",
+    "DXB": "middle_east", "DOH": "middle_east", "AUH": "middle_east",
+    "SYD": "australia", "MEL": "australia",
+    "GRU": "south_america", "EZE": "south_america",
+    "NBO": "africa", "JNB": "africa"
+  },
+  "programs": [
+    {
+      "id": "ana",
+      "name": "ANA Mileage Club",
+      "airline": "ANA",
+      "notes": "Sweet spot for transpacific. Books ANA metal + Star Alliance partners.",
+      "routes": [
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 88000},
+        {"from": "north_america", "to": "japan",          "cabin": "first",    "miles": 120000},
+        {"from": "north_america", "to": "china",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 88000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "business", "miles": 88000},
+        {"from": "north_america", "to": "korea",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "korea",          "cabin": "business", "miles": 88000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "economy",  "miles": 40000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 100000},
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 45000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 88000},
+        {"from": "north_america", "to": "uk",             "cabin": "economy",  "miles": 45000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 88000}
+      ]
+    },
+    {
+      "id": "united",
+      "name": "MileagePlus",
+      "airline": "United",
+      "notes": "Dynamic pricing. Saver awards still available but variable.",
+      "routes": [
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 70000},
+        {"from": "north_america", "to": "china",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 70000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "business", "miles": 70000},
+        {"from": "north_america", "to": "korea",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "korea",          "cabin": "business", "miles": 70000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "economy",  "miles": 40000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 80000},
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 70000},
+        {"from": "north_america", "to": "uk",             "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 70000},
+        {"from": "north_america", "to": "middle_east",    "cabin": "business", "miles": 88000},
+        {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 90000}
+      ]
+    },
+    {
+      "id": "turkish",
+      "name": "Miles&Smiles",
+      "airline": "Turkish Airlines",
+      "notes": "Best value for Star Alliance. Transatlantic business as low as 45k. Books UA/LH/ANA.",
+      "routes": [
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 12500},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 45000},
+        {"from": "north_america", "to": "uk",             "cabin": "economy",  "miles": 12500},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 45000},
+        {"from": "north_america", "to": "middle_east",    "cabin": "economy",  "miles": 15000},
+        {"from": "north_america", "to": "middle_east",    "cabin": "business", "miles": 45000},
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 25000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 65000},
+        {"from": "north_america", "to": "china",          "cabin": "economy",  "miles": 25000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 65000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 65000}
+      ]
+    },
+    {
+      "id": "air_france",
+      "name": "Flying Blue",
+      "airline": "Air France / KLM",
+      "notes": "Promo awards monthly (up to 50% off). Good for transatlantic.",
+      "routes": [
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 20000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 50000},
+        {"from": "north_america", "to": "uk",             "cabin": "economy",  "miles": 20000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 50000},
+        {"from": "north_america", "to": "middle_east",    "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 90000}
+      ]
+    },
+    {
+      "id": "cathay",
+      "name": "Asia Miles",
+      "airline": "Cathay Pacific",
+      "notes": "Best for HKG routes and oneworld partners in Asia.",
+      "routes": [
+        {"from": "north_america", "to": "hong_kong",      "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "business", "miles": 70000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "first",    "miles": 105000},
+        {"from": "north_america", "to": "china",          "cabin": "economy",  "miles": 40000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "economy",  "miles": 40000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 70000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 60000}
+      ]
+    },
+    {
+      "id": "aeroplan",
+      "name": "Aeroplan",
+      "airline": "Air Canada",
+      "notes": "No fuel surcharges on most partners. Great for Star Alliance in Asia.",
+      "routes": [
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 65000},
+        {"from": "north_america", "to": "china",          "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 65000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "business", "miles": 65000},
+        {"from": "north_america", "to": "korea",          "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "korea",          "cabin": "business", "miles": 65000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "middle_east",    "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 85000}
+      ]
+    },
+    {
+      "id": "ba",
+      "name": "Avios",
+      "airline": "British Airways",
+      "notes": "Distance-based. Best for short hops and open-jaw. High fuel surcharges on BA metal.",
+      "routes": [
+        {"from": "north_america", "to": "uk",             "cabin": "economy",  "miles": 26000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 50000},
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 26000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 50000},
+        {"from": "north_america", "to": "middle_east",    "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 45000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 90000}
+      ]
+    },
+    {
+      "id": "american",
+      "name": "AAdvantage",
+      "airline": "American Airlines",
+      "notes": "Dynamic pricing but still has Flagship Business sweet spots.",
+      "routes": [
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 57500},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 57500},
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 80000}
+      ]
+    },
+    {
+      "id": "alaska",
+      "name": "Mileage Plan",
+      "airline": "Alaska Airlines",
+      "notes": "Great for Cathay, JAL, and oneworld partners. No fuel surcharges.",
+      "routes": [
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 55000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "business", "miles": 50000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 50000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 57500},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 57500},
+        {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 55000}
+      ]
+    }
+  ]
+}
