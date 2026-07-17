@@ -188,6 +188,92 @@
         {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 57500},
         {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 55000}
       ]
+    },
+    {
+      "id": "delta",
+      "name": "SkyMiles",
+      "airline": "Delta",
+      "notes": "动态定价，无固定兑换表。以下为典型 Saver 区间，实际可能更高或更低。经济舱有时很划算。",
+      "routes": [
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "uk",             "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 85000},
+        {"from": "north_america", "to": "china",          "cabin": "economy",  "miles": 40000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 90000},
+        {"from": "north_america", "to": "korea",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "korea",          "cabin": "business", "miles": 85000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "economy",  "miles": 40000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 95000},
+        {"from": "north_america", "to": "australia",      "cabin": "economy",  "miles": 45000},
+        {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 95000}
+      ]
+    },
+    {
+      "id": "singapore",
+      "name": "KrisFlyer",
+      "airline": "Singapore Airlines",
+      "notes": "A380 Suites 和商务舱是积分圈最顶级体验之一。可兑换 Star Alliance 合作伙伴。无燃油附加费（SQ 自身航班有）。",
+      "routes": [
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 86000},
+        {"from": "north_america", "to": "japan",          "cabin": "first",    "miles": 114000},
+        {"from": "north_america", "to": "china",          "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "china",          "cabin": "business", "miles": 86000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "economy",  "miles": 35000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "business", "miles": 86000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "economy",  "miles": 37500},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 96000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "first",    "miles": 129000},
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 47500},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 96000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 96000},
+        {"from": "north_america", "to": "australia",      "cabin": "economy",  "miles": 47500},
+        {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 96000},
+        {"from": "north_america", "to": "middle_east",    "cabin": "business", "miles": 96000}
+      ]
+    },
+    {
+      "id": "virgin",
+      "name": "Virgin Atlantic Flying Club",
+      "airline": "Virgin Atlantic / Delta / ANA",
+      "notes": "最大价值：用 Virgin 点数兑换 ANA 头等舱（110k/北美-日本）和 Delta One 商务舱（往往比 SkyMiles 便宜）。无燃油附加费。",
+      "routes": [
+        {"from": "north_america", "to": "uk",             "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 50000},
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 50000},
+        {"from": "north_america", "to": "japan",          "cabin": "economy",  "miles": 30000},
+        {"from": "north_america", "to": "japan",          "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "japan",          "cabin": "first",    "miles": 110000},
+        {"from": "north_america", "to": "hong_kong",      "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 60000},
+        {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 80000},
+        {"from": "north_america", "to": "middle_east",    "cabin": "business", "miles": 60000}
+      ]
+    },
+    {
+      "id": "emirates",
+      "name": "Emirates Skywards",
+      "airline": "Emirates",
+      "notes": "Emirates 商务/头等是顶级体验。First Class Suite 是积分圈标杆。可兑换 flydubai 航班。",
+      "routes": [
+        {"from": "north_america", "to": "middle_east",    "cabin": "economy",  "miles": 37500},
+        {"from": "north_america", "to": "middle_east",    "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "middle_east",    "cabin": "first",    "miles": 115000},
+        {"from": "north_america", "to": "europe",         "cabin": "economy",  "miles": 37500},
+        {"from": "north_america", "to": "europe",         "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "europe",         "cabin": "first",    "miles": 115000},
+        {"from": "north_america", "to": "uk",             "cabin": "business", "miles": 75000},
+        {"from": "north_america", "to": "uk",             "cabin": "first",    "miles": 115000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "economy",  "miles": 55000},
+        {"from": "north_america", "to": "southeast_asia", "cabin": "business", "miles": 105000},
+        {"from": "north_america", "to": "australia",      "cabin": "economy",  "miles": 55000},
+        {"from": "north_america", "to": "australia",      "cabin": "business", "miles": 105000},
+        {"from": "north_america", "to": "australia",      "cabin": "first",    "miles": 155000}
+      ]
     }
   ]
 }

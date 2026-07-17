@@ -139,18 +139,18 @@ function ResultCard({ result: r, wallet }: { result: OptimizeResult; wallet: Wal
                     </span>
                   </div>
                 </div>
-                {card.key_benefits.length > 0 && (
+                {(card.key_benefits ?? []).length > 0 && (
                   <div style={{ marginTop: 8, display: 'flex', flexWrap: 'wrap', gap: 4 }}>
-                    {card.key_benefits.slice(0, 4).map((b, j) => (
+                    {(card.key_benefits ?? []).slice(0, 4).map((b, j) => (
                       <span key={j} style={{
                         fontSize: 10, padding: '2px 7px', borderRadius: 10,
                         background: 'rgba(200,169,110,0.08)', color: '#9A9490',
                         border: '1px solid rgba(200,169,110,0.15)',
                       }}>{b}</span>
                     ))}
-                    {card.key_benefits.length > 4 && (
+                    {(card.key_benefits ?? []).length > 4 && (
                       <span style={{ fontSize: 10, color: '#6B6460', padding: '2px 4px' }}>
-                        +{card.key_benefits.length - 4} 更多
+                        +{(card.key_benefits ?? []).length - 4} 更多
                       </span>
                     )}
                   </div>
