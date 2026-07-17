@@ -15,6 +15,9 @@ export interface RecommendedCard {
   sub_months: number
   annual_fee: number
   leftover_miles: number
+  key_benefits: string[]
+  earning_highlights: string
+  notes: string
 }
 
 export interface OptimizeResult {

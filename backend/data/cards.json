@@ -2,100 +2,248 @@
   {
     "id": "chase_sapphire_reserve",
     "name": "Chase Sapphire Reserve",
+    "short_name": "CSR",
     "currency": "chase_ur",
-    "sub_points": 60000,
-    "sub_spend": 4000,
+    "sub_points": 100000,
+    "sub_spend": 6000,
     "sub_months": 3,
-    "annual_fee": 550
+    "annual_fee": 795,
+    "key_benefits": [
+      "$300 旅行报销",
+      "$500 The Edit 酒店报销",
+      "Priority Pass + Sapphire Lounge 无限次",
+      "$120 Global Entry/TSA PreCheck",
+      "积分兑换 1.5¢/pt（Chase Travel）",
+      "全面旅行保险"
+    ],
+    "earning_highlights": "Chase Travel 8x · 餐饮/旅行 3-4x · 其他 1x",
+    "notes": "UR→Hyatt 2026年10月起降为4:3"
   },
   {
     "id": "chase_sapphire_preferred",
     "name": "Chase Sapphire Preferred",
+    "short_name": "CSP",
     "currency": "chase_ur",
-    "sub_points": 60000,
-    "sub_spend": 4000,
+    "sub_points": 100000,
+    "sub_spend": 5000,
     "sub_months": 3,
-    "annual_fee": 95
+    "annual_fee": 95,
+    "key_benefits": [
+      "$100 年度酒店报销（Chase Travel）",
+      "Apple TV+ 免费订阅",
+      "$120 Global Entry/TSA PreCheck",
+      "DashPass 免费会员",
+      "积分兑换 1.25¢/pt（Chase Travel）",
+      "旅行保险"
+    ],
+    "earning_highlights": "Chase Travel 5x · 餐饮/杂货/Gas 3x · 其他旅行 2x",
+    "notes": "性价比最高入门 UR 卡"
   },
   {
     "id": "chase_ink_preferred",
     "name": "Chase Ink Business Preferred",
+    "short_name": "CIP",
     "currency": "chase_ur",
-    "sub_points": 90000,
+    "sub_points": 100000,
     "sub_spend": 8000,
     "sub_months": 3,
-    "annual_fee": 95
+    "annual_fee": 95,
+    "key_benefits": [
+      "手机保险（最高$1,000）",
+      "行程取消险（最高$5,000/人）",
+      "租车主险（境外适用）",
+      "无境外手续费",
+      "完整 UR 转点权限"
+    ],
+    "earning_highlights": "旅行/运输/广告/网络 3x（前$150k） · 其他 1x",
+    "notes": "商业卡，需有合法商业活动"
   },
   {
     "id": "chase_ink_unlimited",
     "name": "Chase Ink Business Unlimited",
+    "short_name": "CIU",
     "currency": "chase_ur",
-    "sub_points": 75000,
-    "sub_spend": 6000,
-    "sub_months": 3,
-    "annual_fee": 0
+    "sub_points": 100000,
+    "sub_spend": 8000,
+    "sub_months": 4,
+    "annual_fee": 0,
+    "key_benefits": [
+      "免年费",
+      "全类别 1.5x 无上限",
+      "配合 CSR/CSP 可转里程"
+    ],
+    "earning_highlights": "所有消费 1.5x",
+    "notes": "单独持有不可转里程，需搭配有转点权限的卡"
+  },
+  {
+    "id": "chase_ink_cash",
+    "name": "Chase Ink Business Cash",
+    "short_name": "CIC",
+    "currency": "chase_ur",
+    "sub_points": 100000,
+    "sub_spend": 8000,
+    "sub_months": 4,
+    "annual_fee": 0,
+    "key_benefits": [
+      "免年费",
+      "办公/网络 5x",
+      "配合 CSR/CSP 可转里程"
+    ],
+    "earning_highlights": "办公/网络/电话 5x · 加油/餐饮 2x · 其他 1x",
+    "notes": "单独持有不可转里程"
   },
   {
     "id": "amex_platinum",
     "name": "Amex Platinum",
+    "short_name": "Plat",
     "currency": "amex_mr",
-    "sub_points": 80000,
-    "sub_spend": 8000,
+    "sub_points": 175000,
+    "sub_spend": 12000,
     "sub_months": 6,
-    "annual_fee": 695
+    "annual_fee": 895,
+    "key_benefits": [
+      "$600 FHR 酒店报销（每半年$300）",
+      "$200 Uber Cash",
+      "$200 航空附加费报销",
+      "$400 Resy 餐饮报销",
+      "$300 Lululemon 报销",
+      "$200 Oura Ring 报销",
+      "$199 CLEAR+ 报销",
+      "Centurion Lounge 无限进入",
+      "Priority Pass Select",
+      "Delta Sky Club 10次/年",
+      "Marriott Gold + Hilton Gold"
+    ],
+    "earning_highlights": "机票/Amex Travel 5x · 其他 1x",
+    "notes": "175K 史高 offer，常规约80K。Amex一生一次规则"
   },
   {
     "id": "amex_gold",
     "name": "Amex Gold",
+    "short_name": "Gold",
     "currency": "amex_mr",
-    "sub_points": 60000,
+    "sub_points": 100000,
     "sub_spend": 6000,
     "sub_months": 6,
-    "annual_fee": 250
+    "annual_fee": 325,
+    "key_benefits": [
+      "$120 餐饮报销（Grubhub等，$10/月）",
+      "$120 Uber Cash（$10/月）",
+      "$84 Dunkin' 报销（$7/月）",
+      "$100 Resy 报销（每半年$50）",
+      "Hertz 五星精英会籍"
+    ],
+    "earning_highlights": "餐饮/超市 4x · 机票 3x · 酒店（Amex Travel）5x",
+    "notes": "2026年60周年庆新增酒店5x和Hertz会籍"
   },
   {
     "id": "amex_green",
     "name": "Amex Green",
+    "short_name": "Green",
     "currency": "amex_mr",
-    "sub_points": 40000,
+    "sub_points": 60000,
     "sub_spend": 3000,
     "sub_months": 6,
-    "annual_fee": 150
+    "annual_fee": 150,
+    "key_benefits": [
+      "$189 CLEAR+ 报销",
+      "基础旅行保险",
+      "推荐奖励最高55K MR/年"
+    ],
+    "earning_highlights": "旅行/交通/餐饮 3x · 其他 1x",
+    "notes": "即将改名为 Classic Green Card（2026年8月20日）"
   },
   {
     "id": "amex_business_platinum",
     "name": "Amex Business Platinum",
+    "short_name": "Biz Plat",
     "currency": "amex_mr",
-    "sub_points": 120000,
-    "sub_spend": 15000,
+    "sub_points": 200000,
+    "sub_spend": 20000,
     "sub_months": 3,
-    "annual_fee": 695
+    "annual_fee": 895,
+    "key_benefits": [
+      "$600 FHR 酒店报销",
+      "$300 ChatGPT 报销",
+      "$209 CLEAR+ 报销",
+      "$155 Walmart+ 报销",
+      "35% 航空积分返还",
+      "Centurion Lounge + Priority Pass",
+      "Marriott Gold + Hilton Gold"
+    ],
+    "earning_highlights": "机票/Amex Travel 5x · $5,000以上大额消费 1.5x",
+    "notes": "最高 300K MR（YMMV）。常规200K"
   },
   {
-    "id": "citi_premier",
-    "name": "Citi Premier",
+    "id": "citi_strata_premier",
+    "name": "Citi Strata Premier",
+    "short_name": "Strata",
     "currency": "citi_ty",
     "sub_points": 60000,
     "sub_spend": 4000,
     "sub_months": 3,
-    "annual_fee": 95
+    "annual_fee": 95,
+    "key_benefits": [
+      "$100 年度酒店报销（CitiTravel）",
+      "旅行延误保险（6小时触发）",
+      "无境外手续费",
+      "完整 TY 转点权限"
+    ],
+    "earning_highlights": "CitiTravel 10x · 餐饮/杂货/Gas/机票/酒店 3x · 其他 1x",
+    "notes": "原 Citi Premier，2026年可能改版"
   },
   {
-    "id": "citi_prestige",
-    "name": "Citi Prestige",
-    "currency": "citi_ty",
+    "id": "bilt_palladium",
+    "name": "Bilt Palladium",
+    "short_name": "Palladium",
+    "currency": "bilt",
     "sub_points": 50000,
     "sub_spend": 4000,
     "sub_months": 3,
-    "annual_fee": 495
+    "annual_fee": 495,
+    "key_benefits": [
+      "$400 Bilt Travel 酒店报销",
+      "$200 Bilt Cash 返现",
+      "Priority Pass 机场贵宾室",
+      "即时获得 Bilt Gold 会籍",
+      "无境外手续费",
+      "Rent Day（每月1日）转点 Bonus"
+    ],
+    "earning_highlights": "酒店 4x · 餐饮合作商最高5x · Lyft 4x · 其他 2x · 租金 1x（免手续费）",
+    "notes": "旧版 Wells Fargo Bilt Mastercard 已停发。开卡额外获$300 Bilt Cash"
   },
   {
-    "id": "bilt_mastercard",
-    "name": "Bilt Mastercard",
+    "id": "bilt_obsidian",
+    "name": "Bilt Obsidian",
+    "short_name": "Obsidian",
     "currency": "bilt",
     "sub_points": 0,
     "sub_spend": 0,
     "sub_months": 0,
-    "annual_fee": 0
+    "annual_fee": 95,
+    "key_benefits": [
+      "$100 Bilt Travel 酒店报销",
+      "无境外手续费",
+      "Rent Day（每月1日）转点 Bonus"
+    ],
+    "earning_highlights": "酒店/餐饮/机票 3-4x · 其他旅行 2x · 租金 1x（免手续费）",
+    "notes": "Bilt 2.0 中端卡"
+  },
+  {
+    "id": "bilt_blue",
+    "name": "Bilt Blue",
+    "short_name": "Blue",
+    "currency": "bilt",
+    "sub_points": 0,
+    "sub_spend": 0,
+    "sub_months": 0,
+    "annual_fee": 0,
+    "key_benefits": [
+      "免年费",
+      "付房租/房贷赚积分（免手续费）",
+      "开卡 $100 Bilt Cash"
+    ],
+    "earning_highlights": "租金 1x（免手续费）",
+    "notes": "Bilt 2.0 入门免年费卡"
   }
 ]

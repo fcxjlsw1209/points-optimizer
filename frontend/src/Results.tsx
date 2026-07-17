@@ -112,25 +112,54 @@ function ResultCard({ result: r, wallet }: { result: OptimizeResult; wallet: Wal
       {r.recommended_cards.length > 0 && (
         <div style={{ borderTop: '1px solid #2A2826', paddingTop: 12 }}>
           <div style={{ fontSize: 11, color: '#9A9490', marginBottom: 8 }}>开卡补齐缺口：</div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {r.recommended_cards.map((card, i) => (
               <div key={i} style={{
-                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                background: '#0E0E0E', borderRadius: 6, padding: '8px 12px',
+                background: '#0E0E0E', borderRadius: 8, padding: '10px 12px',
+                border: '1px solid #2A2826',
               }}>
-                <div>
-                  <div style={{ fontSize: 12, fontWeight: 500 }}>{card.name}</div>
-                  <div style={{ fontSize: 11, color: '#6B6460', marginTop: 2 }}>
-                    SUB {fmt(card.sub_points)} pts · 消费 ${fmt(card.sub_spend)} / {card.sub_months}个月
-                    {card.annual_fee > 0 ? ` · 年费 $${card.annual_fee}` : ' · 免年费'}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                  <div>
+                    <div style={{ fontSize: 12, fontWeight: 600 }}>{card.name}</div>
+                    <div style={{ fontSize: 11, color: '#6B6460', marginTop: 2 }}>
+                      SUB <span style={{ color: '#C8A96E' }}>{fmt(card.sub_points)} pts</span>
+                      {' '}· 消费 ${fmt(card.sub_spend)}/{card.sub_months}月
+                      {card.annual_fee > 0 ? ` · 年费 $${card.annual_fee}` : ' · 免年费'}
+                    </div>
+                    {card.earning_highlights && (
+                      <div style={{ fontSize: 11, color: '#6B6460', marginTop: 4, fontStyle: 'italic' }}>
+                        {card.earning_highlights}
+                      </div>
+                    )}
+                  </div>
+                  <div style={{ textAlign: 'right', fontSize: 11, color: '#9A9490', flexShrink: 0, marginLeft: 12 }}>
+                    兑换后剩余<br />
+                    <span style={{ color: '#C8A96E', fontFamily: "'JetBrains Mono', monospace", fontWeight: 600 }}>
+                      +{fmt(card.leftover_miles)}
+                    </span>
                   </div>
                 </div>
-                <div style={{ textAlign: 'right', fontSize: 11, color: '#9A9490' }}>
-                  剩余<br />
-                  <span style={{ color: '#C8A96E', fontFamily: "'JetBrains Mono', monospace", fontWeight: 600 }}>
-                    +{fmt(card.leftover_miles)}
-                  </span>
-                </div>
+                {card.key_benefits.length > 0 && (
+                  <div style={{ marginTop: 8, display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                    {card.key_benefits.slice(0, 4).map((b, j) => (
+                      <span key={j} style={{
+                        fontSize: 10, padding: '2px 7px', borderRadius: 10,
+                        background: 'rgba(200,169,110,0.08)', color: '#9A9490',
+                        border: '1px solid rgba(200,169,110,0.15)',
+                      }}>{b}</span>
+                    ))}
+                    {card.key_benefits.length > 4 && (
+                      <span style={{ fontSize: 10, color: '#6B6460', padding: '2px 4px' }}>
+                        +{card.key_benefits.length - 4} 更多
+                      </span>
+                    )}
+                  </div>
+                )}
+                {card.notes && (
+                  <div style={{ marginTop: 6, fontSize: 10, color: '#6B6460', fontStyle: 'italic' }}>
+                    ⚠ {card.notes}
+                  </div>
+                )}
               </div>
             ))}
           </div>

@@ -80,11 +80,15 @@ def optimize(
                                 recommended_cards.append({
                                     "id": card["id"],
                                     "name": card["name"],
+                                    "short_name": card.get("short_name", card["name"]),
                                     "sub_points": card["sub_points"],
                                     "sub_spend": card["sub_spend"],
                                     "sub_months": card["sub_months"],
                                     "annual_fee": card["annual_fee"],
                                     "leftover_miles": leftover,
+                                    "key_benefits": card.get("key_benefits", []),
+                                    "earning_highlights": card.get("earning_highlights", ""),
+                                    "notes": card.get("notes", ""),
                                 })
                     # Sort by lowest annual fee first
                     recommended_cards.sort(key=lambda c: (c["annual_fee"], -c["sub_points"]))

@@ -31,12 +31,13 @@
   "bilt": [
     {"airline": "united",     "program": "MileagePlus",      "ratio": 1.0},
     {"airline": "american",   "program": "AAdvantage",       "ratio": 1.0},
-    {"airline": "air_france", "program": "Flying Blue",       "ratio": 1.0},
+    {"airline": "air_france", "program": "Flying Blue",      "ratio": 1.0},
     {"airline": "alaska",     "program": "Mileage Plan",     "ratio": 1.0},
     {"airline": "aeroplan",   "program": "Aeroplan",         "ratio": 1.0},
     {"airline": "ba",         "program": "Avios",            "ratio": 1.0},
     {"airline": "cathay",     "program": "Asia Miles",       "ratio": 1.0},
     {"airline": "virgin",     "program": "Virgin Atlantic",  "ratio": 1.0},
-    {"airline": "turkish",    "program": "Miles&Smiles",     "ratio": 1.0}
+    {"airline": "turkish",    "program": "Miles&Smiles",     "ratio": 1.0},
+    {"airline": "emirates",   "program": "Emirates Skywards","ratio": 1.0}
   ]
 }
