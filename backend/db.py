@@ -1,13 +1,21 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 
 from sqlmodel import Field, Session, SQLModel, create_engine, select, text
 
 from backend.config import db_path
 
-CURRENCIES = ["chase_ur", "amex_mr", "citi_ty", "bilt"]
+CC_CURRENCIES = ["chase_ur", "amex_mr", "citi_ty", "bilt"]
+
+AIRLINE_CURRENCIES = [
+    "ana", "united", "turkish", "air_france", "cathay",
+    "aeroplan", "ba", "american", "alaska", "delta",
+    "singapore", "virgin", "emirates",
+]
+
+ALL_CURRENCIES = CC_CURRENCIES + AIRLINE_CURRENCIES
 
 
 class WalletEntry(SQLModel, table=True):
@@ -39,7 +47,7 @@ def engine():
 def get_wallet() -> Dict[str, int]:
     with Session(engine()) as session:
         rows = session.exec(select(WalletEntry)).all()
-        result = {c: 0 for c in CURRENCIES}
+        result = {c: 0 for c in ALL_CURRENCIES}
         for row in rows:
             if row.currency in result:
                 result[row.currency] = row.balance
@@ -49,7 +57,7 @@ def get_wallet() -> Dict[str, int]:
 def upsert_wallet(balances: Dict[str, int]) -> None:
     with Session(engine()) as session:
         for currency, balance in balances.items():
-            if currency not in CURRENCIES:
+            if currency not in ALL_CURRENCIES:
                 continue
             existing = session.exec(
                 select(WalletEntry).where(WalletEntry.currency == currency)

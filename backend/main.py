@@ -30,10 +30,25 @@ class OptimizeRequest(BaseModel):
 
 
 class WalletUpdate(BaseModel):
+    # Credit card currencies
     chase_ur: int = 0
     amex_mr: int = 0
     citi_ty: int = 0
     bilt: int = 0
+    # Airline miles (direct holdings)
+    ana: int = 0
+    united: int = 0
+    turkish: int = 0
+    air_france: int = 0
+    cathay: int = 0
+    aeroplan: int = 0
+    ba: int = 0
+    american: int = 0
+    alaska: int = 0
+    delta: int = 0
+    singapore: int = 0
+    virgin: int = 0
+    emirates: int = 0
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────

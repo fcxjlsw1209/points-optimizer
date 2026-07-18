@@ -1,16 +1,72 @@
 import { useState } from 'react'
 import { api, Wallet } from './api'
 
-const CURRENCIES: { key: keyof Wallet; label: string; color: string }[] = [
+const CC_CURRENCIES: { key: keyof Wallet; label: string; color: string }[] = [
   { key: 'chase_ur', label: 'Chase UR',  color: '#1A6EBF' },
   { key: 'amex_mr',  label: 'Amex MR',   color: '#007A5E' },
   { key: 'citi_ty',  label: 'Citi TY',   color: '#CC3333' },
   { key: 'bilt',     label: 'Bilt',      color: '#8B5CF6' },
 ]
 
+const AIRLINE_CURRENCIES: { key: keyof Wallet; label: string; program: string }[] = [
+  { key: 'united',     label: 'United',          program: 'MileagePlus' },
+  { key: 'american',   label: 'American',         program: 'AAdvantage' },
+  { key: 'delta',      label: 'Delta',            program: 'SkyMiles' },
+  { key: 'alaska',     label: 'Alaska',           program: 'Mileage Plan' },
+  { key: 'ana',        label: 'ANA',              program: 'ANA Mileage Club' },
+  { key: 'aeroplan',   label: 'Air Canada',       program: 'Aeroplan' },
+  { key: 'cathay',     label: 'Cathay Pacific',   program: 'Asia Miles' },
+  { key: 'air_france', label: 'Air France/KLM',   program: 'Flying Blue' },
+  { key: 'ba',         label: 'British Airways',  program: 'Avios' },
+  { key: 'singapore',  label: 'Singapore',        program: 'KrisFlyer' },
+  { key: 'turkish',    label: 'Turkish',          program: 'Miles&Smiles' },
+  { key: 'virgin',     label: 'Virgin Atlantic',  program: 'Flying Club' },
+  { key: 'emirates',   label: 'Emirates',         program: 'Skywards' },
+]
+
+const inputStyle: React.CSSProperties = {
+  flex: 1,
+  background: '#161616',
+  border: '1px solid #2A2826',
+  borderRadius: 6,
+  color: '#E8E0D0',
+  padding: '7px 12px',
+  fontSize: 13,
+  fontFamily: "'JetBrains Mono', monospace",
+  outline: 'none',
+}
+
 interface Props {
   wallet: Wallet
   onChange: (w: Wallet) => void
+}
+
+function CurrencyRow({ label, sublabel, color, value, onChange }: {
+  label: string
+  sublabel?: string
+  color?: string
+  value: number
+  onChange: (v: string) => void
+}) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+      <div style={{ width: 130, flexShrink: 0 }}>
+        <div style={{ fontSize: 12, fontWeight: 600, color: color ?? '#9A9490', fontFamily: "'JetBrains Mono', monospace" }}>
+          {label}
+        </div>
+        {sublabel && <div style={{ fontSize: 10, color: '#6B6460', marginTop: 1 }}>{sublabel}</div>}
+      </div>
+      <input
+        type="number"
+        min={0}
+        step={1000}
+        value={value || ''}
+        onChange={e => onChange(e.target.value)}
+        placeholder="0"
+        style={inputStyle}
+      />
+    </div>
+  )
 }
 
 export default function MyWallet({ wallet, onChange }: Props) {
@@ -34,47 +90,63 @@ export default function MyWallet({ wallet, onChange }: Props) {
     }
   }
 
+  const ccTotal = CC_CURRENCIES.reduce((s, c) => s + (wallet[c.key] as number || 0), 0)
+  const airlineHasAny = AIRLINE_CURRENCIES.some(c => (wallet[c.key] as number || 0) > 0)
+
   return (
-    <div style={{ maxWidth: 480 }}>
-      <h2 style={{ fontSize: 15, fontWeight: 600, marginBottom: 20, color: '#C8A96E' }}>我的积分</h2>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        {CURRENCIES.map(({ key, label, color }) => (
-          <div key={key} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <div style={{
-              width: 80, fontSize: 12, fontWeight: 600,
-              color, fontFamily: "'JetBrains Mono', monospace",
-            }}>
-              {label}
-            </div>
-            <input
-              type="number"
-              min={0}
-              step={1000}
-              value={wallet[key] || ''}
-              onChange={e => handleChange(key, e.target.value)}
-              placeholder="0"
-              style={{
-                flex: 1,
-                background: '#161616',
-                border: '1px solid #2A2826',
-                borderRadius: 6,
-                color: '#E8E0D0',
-                padding: '8px 12px',
-                fontSize: 14,
-                fontFamily: "'JetBrains Mono', monospace",
-                outline: 'none',
-              }}
+    <div style={{ maxWidth: 520 }}>
+      {/* Credit card points */}
+      <div style={{ marginBottom: 28 }}>
+        <h2 style={{ fontSize: 13, fontWeight: 600, color: '#C8A96E', marginBottom: 14, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+          信用卡积分
+        </h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {CC_CURRENCIES.map(({ key, label, color }) => (
+            <CurrencyRow
+              key={key}
+              label={label}
+              color={color}
+              value={wallet[key] as number}
+              onChange={v => handleChange(key, v)}
             />
+          ))}
+        </div>
+        {ccTotal > 0 && (
+          <div style={{ marginTop: 12, fontSize: 11, color: '#6B6460' }}>
+            合计 <span style={{ color: '#C8A96E', fontFamily: "'JetBrains Mono', monospace" }}>{ccTotal.toLocaleString()}</span> pts
+            {' '}≈ <span style={{ color: '#C8A96E' }}>${(ccTotal * 0.015).toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>（按 1.5¢/pt 估算）
           </div>
-        ))}
+        )}
+      </div>
+
+      {/* Airline miles */}
+      <div style={{ marginBottom: 24 }}>
+        <h2 style={{ fontSize: 13, fontWeight: 600, color: '#C8A96E', marginBottom: 14, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+          航司里程（直接持有）
+        </h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {AIRLINE_CURRENCIES.map(({ key, label, program }) => (
+            <CurrencyRow
+              key={key}
+              label={label}
+              sublabel={program}
+              value={wallet[key] as number}
+              onChange={v => handleChange(key, v)}
+            />
+          ))}
+        </div>
+        {airlineHasAny && (
+          <div style={{ marginTop: 12, fontSize: 11, color: '#6B6460' }}>
+            直接持有的里程在搜索时优先显示，无需转点
+          </div>
+        )}
       </div>
 
       <button
         onClick={handleSave}
         disabled={saving}
         style={{
-          marginTop: 20,
-          padding: '9px 24px',
+          padding: '9px 28px',
           background: saved ? '#166534' : '#C8A96E',
           color: saved ? '#fff' : '#0E0E0E',
           border: 'none',
@@ -87,25 +159,6 @@ export default function MyWallet({ wallet, onChange }: Props) {
       >
         {saving ? '保存中…' : saved ? '已保存 ✓' : '保存'}
       </button>
-
-      <div style={{ marginTop: 24, padding: '12px 16px', background: '#161616', borderRadius: 8, border: '1px solid #2A2826' }}>
-        <div style={{ fontSize: 11, color: '#6B6460', marginBottom: 8 }}>总积分价值估算（按 1.5¢/point）</div>
-        <div style={{ fontSize: 22, fontWeight: 600, fontFamily: "'JetBrains Mono', monospace", color: '#C8A96E' }}>
-          ${((
-            (wallet.chase_ur + wallet.amex_mr + wallet.citi_ty + wallet.bilt) * 0.015
-          ).toLocaleString('en-US', { maximumFractionDigits: 0 }))}
-        </div>
-        <div style={{ marginTop: 8, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-          {CURRENCIES.map(({ key, label, color }) => (
-            wallet[key] > 0 && (
-              <div key={key} style={{ fontSize: 11, color: '#9A9490' }}>
-                <span style={{ color }}>{label}</span>
-                {' '}{wallet[key].toLocaleString()}
-              </div>
-            )
-          ))}
-        </div>
-      </div>
     </div>
   )
 }

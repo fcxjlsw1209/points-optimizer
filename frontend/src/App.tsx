@@ -6,7 +6,12 @@ import MyWallet from './MyWallet'
 
 type Tab = 'search' | 'wallet'
 
-const DEFAULT_WALLET: Wallet = { chase_ur: 0, amex_mr: 0, citi_ty: 0, bilt: 0 }
+const DEFAULT_WALLET: Wallet = {
+  chase_ur: 0, amex_mr: 0, citi_ty: 0, bilt: 0,
+  ana: 0, united: 0, turkish: 0, air_france: 0, cathay: 0,
+  aeroplan: 0, ba: 0, american: 0, alaska: 0, delta: 0,
+  singapore: 0, virgin: 0, emirates: 0,
+}
 
 export default function App() {
   const [tab, setTab] = useState<Tab>('search')

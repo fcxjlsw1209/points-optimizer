@@ -60,7 +60,27 @@ def optimize(
 
         total_miles_needed = miles_needed * passengers
 
-        # Find all currencies that can transfer to this program
+        # --- Option A: direct airline miles already held ---
+        direct_miles = wallet.get(pid, 0)
+        if direct_miles > 0:
+            gap = max(0, total_miles_needed - direct_miles)
+            results.append({
+                "program_id": pid,
+                "program_name": pname,
+                "airline": program["airline"],
+                "notes": pnotes,
+                "currency": pid,
+                "currency_label": "直接持有",
+                "ratio": 1.0,
+                "miles_needed": total_miles_needed,
+                "available_miles": direct_miles,
+                "gap": gap,
+                "can_redeem_now": gap == 0,
+                "recommended_cards": [],
+                "is_direct": True,
+            })
+
+        # --- Option B: transfer from credit card currencies ---
         for currency, partner_list in partners.items():
             user_balance = wallet.get(currency, 0)
             for partner in partner_list:
@@ -102,6 +122,7 @@ def optimize(
 
                 results.append({
                     "program_id": pid,
+                    "is_direct": False,
                     "program_name": pname,
                     "airline": program["airline"],
                     "notes": pnotes,

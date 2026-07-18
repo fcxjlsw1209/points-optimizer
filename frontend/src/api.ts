@@ -1,10 +1,25 @@
 const BASE = '/api'
 
 export interface Wallet {
+  // Credit card currencies
   chase_ur: number
   amex_mr: number
   citi_ty: number
   bilt: number
+  // Airline miles (direct holdings)
+  ana: number
+  united: number
+  turkish: number
+  air_france: number
+  cathay: number
+  aeroplan: number
+  ba: number
+  american: number
+  alaska: number
+  delta: number
+  singapore: number
+  virgin: number
+  emirates: number
 }
 
 export interface RecommendedCard {
@@ -33,6 +48,7 @@ export interface OptimizeResult {
   gap: number
   can_redeem_now: boolean
   recommended_cards: RecommendedCard[]
+  is_direct?: boolean
 }
 
 export interface OptimizeResponse {

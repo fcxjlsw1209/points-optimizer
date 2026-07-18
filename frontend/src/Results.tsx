@@ -84,7 +84,12 @@ function ResultCard({ result: r, wallet }: { result: OptimizeResult; wallet: Wal
       <div style={{ marginBottom: 12 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: '#9A9490', marginBottom: 4 }}>
           <span>需要 <strong style={{ color: '#E8E0D0' }}>{fmt(r.miles_needed)}</strong> miles</span>
-          <span>via <strong style={{ color }}>{r.currency_label}</strong> → {r.program_name}</span>
+          <span>
+            {r.is_direct
+              ? <span style={{ background: 'rgba(200,169,110,0.15)', color: '#C8A96E', padding: '1px 6px', borderRadius: 4, fontSize: 10, fontWeight: 600 }}>直接持有</span>
+              : <>via <strong style={{ color }}>{r.currency_label}</strong> → {r.program_name}</>
+            }
+          </span>
         </div>
         <div style={{ height: 6, background: '#2A2826', borderRadius: 3, overflow: 'hidden' }}>
           <div style={{
